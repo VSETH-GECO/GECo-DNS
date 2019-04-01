@@ -52,6 +52,18 @@ fi
 rm -f ${CACHECONF}
 touch ${CACHECONF}
 
+#Add geco file domain
+echo "
+	zone \"files.geco.local\" {
+		type master;
+		file \"/etc/bind/cache/files.geco.local.db\";
+	};" > ${CACHECONF}
+
+touch ${ZONEPATH}files.geco.local.db
+echo "
+	files.geco.local.        IN      A      10.10.0.71" > ${ZONEPATH}files.geco.local.db
+
+
 #Add the rpz zones to the cache.conf
 echo "
 	zone \"$LANCACHE_DNSDOMAIN\" {
