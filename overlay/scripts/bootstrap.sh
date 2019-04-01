@@ -53,12 +53,6 @@ rm -f ${CACHECONF}
 touch ${CACHECONF}
 
 #Add geco file domain
-echo "
-	zone \"geco.local\" {
-		type master;
-		file \"/etc/bind/cache/geco.local.db\";
-	};" > ${CACHECONF}
-
 touch ${ZONEPATH}geco.local.db
 echo "
 	$ORIGIN geco.local.
@@ -77,6 +71,10 @@ echo "
 
 #Add the rpz zones to the cache.conf
 echo "
+	zone \"geco.local\" {
+		type master;
+		file \"/etc/bind/cache/geco.local.db\";
+	};
 	zone \"$LANCACHE_DNSDOMAIN\" {
 		type master;
 		file \"$CACHE_ZONE\";
