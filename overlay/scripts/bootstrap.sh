@@ -55,17 +55,17 @@ touch ${CACHECONF}
 #Add geco file domain
 touch ${ZONEPATH}geco.local.db
 echo "\$ORIGIN geco.local.
-	\$TTL    600
-	@       IN  SOA localhost. dns.steamcache.net. (
-		     1554135169
-		     604800
-		     600
-		     600
-		     600 )
-	@       IN  NS  localhost.
+\$TTL    600
+@       IN  SOA localhost. dns.steamcache.net. (
+	     1554135169
+	     604800
+	     600
+	     600
+	     600 )
+@       IN  NS  localhost.
 
 
-	files IN A 10.10.0.71;" > ${ZONEPATH}geco.local.db
+files IN A 10.10.0.71;" > ${ZONEPATH}geco.local.db
 
 
 #Add the rpz zones to the cache.conf
