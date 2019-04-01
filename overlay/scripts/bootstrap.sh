@@ -54,9 +54,8 @@ touch ${CACHECONF}
 
 #Add geco file domain
 touch ${ZONEPATH}geco.local.db
-echo "
-	$ORIGIN geco.local.
-	$TTL    600
+echo "\$ORIGIN geco.local.
+	\$TTL    600
 	@       IN  SOA localhost. dns.steamcache.net. (
 		     1554135169
 		     604800
