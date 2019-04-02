@@ -65,7 +65,16 @@ echo "\$ORIGIN geco.local.
 @       IN  NS  localhost.
 
 
-files IN A 10.10.0.71;" > ${ZONEPATH}geco.local.db
+files IN A 10.10.0.71;
+ebot IN A 10.10.0.31
+adminafk IN A 10.10.0.32
+minecraft IN A 10.10.0.65
+csmatch1 IN A 10.10.0.21
+csmatch2 IN A 10.10.0.22
+csmatch3 IN A 10.10.0.23
+csmatch4 IN A 10.10.0.24
+csfun1 IN A 10.10.0.25
+login IN A 10.10.0.20" > ${ZONEPATH}geco.local.db
 
 
 #Add the rpz zones to the cache.conf
