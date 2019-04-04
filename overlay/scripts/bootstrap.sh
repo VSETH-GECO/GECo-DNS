@@ -52,7 +52,7 @@ fi
 rm -f ${CACHECONF}
 touch ${CACHECONF}
 
-#Add geco file domain
+#Add geco local domains
 touch ${ZONEPATH}geco.local.db
 echo "\$ORIGIN geco.local.
 \$TTL    600
@@ -66,19 +66,40 @@ echo "\$ORIGIN geco.local.
 
 
 files IN A 10.10.0.71;
-ebot IN A 10.10.0.31
-adminafk IN A 10.10.0.32
-minecraft IN A 10.10.0.65
-csmatch1 IN A 10.10.0.21
-csmatch2 IN A 10.10.0.22
-csmatch3 IN A 10.10.0.23
-csmatch4 IN A 10.10.0.24
-csfun1 IN A 10.10.0.25
-login IN A 10.10.0.20" > ${ZONEPATH}geco.local.db
+ebot IN A 10.10.0.31;
+adminafk IN A 10.10.0.32;
+minecraft IN A 10.10.0.65;
+csmatch1 IN A 10.10.0.21;
+csmatch2 IN A 10.10.0.22;
+csmatch3 IN A 10.10.0.23;
+csmatch4 IN A 10.10.0.24;
+csfun1 IN A 10.10.0.25;
+login IN A 10.10.0.20;" > ${ZONEPATH}geco.local.db
+
+#Add polyln.org domain
+touch ${ZONEPATH}geco.local.db
+echo "\$ORIGIN geco.local.
+\$TTL    600
+@       IN  SOA localhost. dns.steamcache.net. (
+	     1554135169
+	     604800
+	     600
+	     600
+	     600 )
+@       IN  NS  localhost.
+
+
+login IN A 10.10.0.20;
+portalone IN A 10.10.100.100;
+portaltwo IN A 10.10.100.101;" > ${ZONEPATH}polylan.org.db
 
 
 #Add the rpz zones to the cache.conf
 echo "
+	zone \"polylan.org\" {
+		type master;
+		file \"/etc/bind/cache/polylan.org.db\";
+	};
 	zone \"geco.local\" {
 		type master;
 		file \"/etc/bind/cache/geco.local.db\";
