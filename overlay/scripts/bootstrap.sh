@@ -90,8 +90,8 @@ echo "\$ORIGIN polylan.org.
 
 
 login IN A 10.10.0.20;
-portalone IN A 10.10.100.100;
-portaltwo IN A 10.10.100.101;" > ${ZONEPATH}polylan.org.db
+portalone IN A 10.10.200.1;
+portaltwo IN A 10.10.200.2;" > ${ZONEPATH}polylan.org.db
 
 
 #Add the rpz zones to the cache.conf
