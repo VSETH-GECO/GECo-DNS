@@ -77,8 +77,8 @@ csfun1 IN A 10.10.0.25;
 login IN A 10.10.0.20;" > ${ZONEPATH}geco.local.db
 
 #Add polyln.org domain
-touch ${ZONEPATH}geco.local.db
-echo "\$ORIGIN geco.local.
+touch ${ZONEPATH}polylan.org.db
+echo "\$ORIGIN polylan.org.
 \$TTL    600
 @       IN  SOA localhost. dns.steamcache.net. (
 	     1554135169
