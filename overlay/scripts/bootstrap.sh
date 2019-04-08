@@ -74,6 +74,7 @@ csmatch2 IN A 10.10.0.22;
 csmatch3 IN A 10.10.0.23;
 csmatch4 IN A 10.10.0.24;
 csfun1 IN A 10.10.0.25;
+freenas IN A 10.10.0.133;
 login IN A 10.10.0.20;" > ${ZONEPATH}geco.local.db
 
 #Add polyln.org domain
