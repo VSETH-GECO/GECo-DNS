@@ -66,9 +66,11 @@ echo "\$ORIGIN geco.local.
 
 
 files IN A 10.10.0.71;
+ts IN A 10.10.0.30;
 ebot IN A 10.10.0.31;
 adminafk IN A 10.10.0.32;
 minecraft IN A 10.10.0.65;
+bfbc2 IN A 10.10.0.45;
 csmatch1 IN A 10.10.0.21;
 csmatch2 IN A 10.10.0.22;
 csmatch3 IN A 10.10.0.23;
